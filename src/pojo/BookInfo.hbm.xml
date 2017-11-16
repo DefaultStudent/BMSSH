@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="pojo.BookInfo" table="bookinfo">
+        <id name="bookid" column="bookid">
+            <generator class="assigned" /><!-- 主键的生成策略 -->
+        </id>
+        <property name="bookname" column="bookname"></property>
+        <property name="booktypename" column="booktypename"></property>
+        <property name="author" column="author"></property>
+        <property name="pubname" column="pubname"></property>
+        <property name="isbn" column="isbn"></property>
+        <property name="price" column="price"></property>
+        <many-to-one name="booktype" class="pojo.BookType" unique="true" cascade="all">
+            <column name="booktypeid"></column>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
