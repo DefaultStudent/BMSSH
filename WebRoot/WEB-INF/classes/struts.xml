@@ -7,5 +7,5 @@
 
 <struts>
     <constant name="struts.i18n.encoding" value="UTF-8"></constant>
-    
+    <include file="struts-login.xml"></include>
 </struts>
