@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+
+<struts>
+    <package name="reader" extends="struts-default" namespace="/">
+        <action name="Reader_add" class="action0318.ReaderAction" method="addReader">
+            <result name="success">/readerinfo_queryall.jsp</result><!-- 需要修改 -->
+            <result name="input">/login.jsp</result>
+        </action>
+    </package>
+</struts>

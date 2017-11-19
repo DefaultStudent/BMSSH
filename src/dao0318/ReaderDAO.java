@@ -22,7 +22,7 @@ public interface ReaderDAO {
 	public boolean updateReader(Reader reader) throws Exception;
 	
 	// 删除读者信息
-	public boolean deleteReader(Reader reader) throws Exception;
+	public boolean deleteReader(int rid) throws Exception;
 	
 	// 添加读者信息
 	public boolean addReader(Reader reader) throws Exception;

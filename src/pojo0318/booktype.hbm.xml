@@ -6,9 +6,5 @@
             <generator class="assigned" />
         </id>
         <property name="booktypename" column="booktypename"></property>
-        <set name="bookinfos" cascade="all">
-            <key column="booktypeid"/>
-            <one-to-many class="pojo.BookInfo"/>
-        </set>
     </class>
 </hibernate-mapping>

@@ -13,7 +13,6 @@ import java.util.Set;
 public class BookType {
 	private int booktypeid;
 	private String booktypename;
-	private Set<BookInfo> bookinfo = new HashSet<BookInfo>();
 	
 	public int getBooktypeid() {
 		return booktypeid;
@@ -27,12 +26,5 @@ public class BookType {
 	public void setBooktypename(String booktypename) {
 		this.booktypename = booktypename;
 	}
-	public Set<BookInfo> getBookinfo() {
-		return bookinfo;
-	}
-	public void setBookinfo(Set<BookInfo> bookinfo) {
-		this.bookinfo = bookinfo;
-	}
 	
-
 }

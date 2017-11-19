@@ -11,8 +11,5 @@
         <property name="pubname" column="pubname"></property>
         <property name="isbn" column="isbn"></property>
         <property name="price" column="price"></property>
-        <many-to-one name="booktype" class="pojo.BookType" unique="true" cascade="all">
-            <column name="booktypeid"></column>
-        </many-to-one>
     </class>
 </hibernate-mapping>

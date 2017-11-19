@@ -66,10 +66,10 @@ public class ReaderDAOImpl implements ReaderDAO {
 
 	// 删除读者信息
 	@Override
-	public boolean deleteReader(Reader reader) throws Exception {
+	public boolean deleteReader(int rid) throws Exception {
 		String hql = "delete from Reader where rid = ?";
 		Query query = session.createQuery(hql);
-		query.setInteger(0, reader.getRid());
+		query.setInteger(0, rid);
 		query.executeUpdate();
 		tran.commit();
 		return true;

@@ -14,17 +14,6 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 <link href="CSS/style.css" rel="stylesheet">
-<script language="javascript">
-function prompt(){
-	if(myform.limit.value==2){
-		if(myform.count.value>0){
-			alert("ÄúÓÐÍ¼ÊéÒÑµ½ÆÚ£¬Çë¼°Ê±¹é»¹£¡");
-		}
-	}else{
-		return false;
-	}
-}
-</script>
   </head>
   
   <body onload="prompt()">

@@ -16,7 +16,6 @@ public class BookInfo {
 	private String pubname;
 	private String isbn;
 	private double price;
-	private BookType booktype;
 	
 	public int getBookid() {
 		return bookid;
@@ -59,12 +58,6 @@ public class BookInfo {
 	}
 	public void setPrice(double price) {
 		this.price = price;
-	}
-	public BookType getBooktype() {
-		return booktype;
-	}
-	public void setBooktype(BookType booktype) {
-		this.booktype = booktype;
 	}
 
 }
