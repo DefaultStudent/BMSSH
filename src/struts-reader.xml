@@ -8,8 +8,16 @@
 <struts>
     <package name="reader" extends="struts-default" namespace="/">
         <action name="Reader_add" class="action0318.ReaderAction" method="addReader">
-            <result name="success">/readerinfo_queryall.jsp</result><!-- 需要修改 -->
-            <result name="input">/login.jsp</result>
+            <result name="success" type="chain">Reader_findAll</result>
+            <result name="input">/readerinfo_add.jsp</result>
+        </action>
+        
+        <action name="Reader_delete" class="action0318.ReaderAction" method="deleteReader">
+            <result name="success" type="chain">Reader_findAll</result>
+        </action>
+        
+        <action name="Reader_findAll" class="action0318.ReaderAction" method="findAll">
+            <result name="success">/readerinfo_queryall.jsp</result>
         </action>
     </package>
 </struts>

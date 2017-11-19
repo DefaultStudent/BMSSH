@@ -6,6 +6,6 @@
             <generator class="assigned" /><!-- 主键的生成策略 -->
         </id>
         <property name="rname" column="rname"></property>
-        <property name="ridcard" column="upwd"></property>
+        <property name="ridcard" column="ridcard"></property>
     </class>
 </hibernate-mapping>

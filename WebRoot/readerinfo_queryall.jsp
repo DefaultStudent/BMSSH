@@ -1,4 +1,5 @@
 <%@ page language="java"  import="java.util.*"   pageEncoding="GB18030" contentType="text/html; charset=gb18030"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -16,10 +17,6 @@
   </head>
   
   <body>
-  <%  
-  	
-  
-  %>
      <%@include file="banner.jsp" %>
      <%@include file="navigation.jsp" %>
      <table width="778"  border="0" cellspacing="0" cellpadding="0" align="center">
@@ -38,7 +35,7 @@
     <td><a href="readerinfo_add.jsp">添加用户信息</a> </td>
   </tr>
 </table>
-     
+    
   <table width="100%"  border="1" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" bordercolordark="#F6B83B" bordercolorlight="#FFFFFF">
   <tr align="center" bgcolor="#e3F4F7">
     <td width="10%" bgcolor="#F9D16B">用户编号</td>
@@ -46,24 +43,30 @@
     <td width="12%" bgcolor="#F9D16B">身份证</td>
     <td width="8%" bgcolor="#F9D16B">删除</td>
   </tr>
-<%
-  
-	%> 
+  <s:iterator var="reader" value="#session.reader"> 
   <tr>
-  <td style="padding:5px;"></td>
-    <td style="padding:5px;"></td>
-     <td style="padding:5px;"></td>
-     <td align="center"><a href="" >删除</a></td> 
+  <td style="padding:5px;">
+  <s:property value="#reader.rid"/>
+  </td>
+  <td style="padding:5px;">
+    <s:property value="#reader.rname"/>
+  </td>
+  <td style="padding:5px;">
+     <s:property value="#reader.ridcard"/>
+     </td>
+  <td align="center"><s:a href="Reader_delete?rid=%{#reader.rid}">删除</s:a></td> 
  
   </tr>
-
+</s:iterator>
  </table>
 </td>
       </tr>
     </table>
 </td>
   </tr>
-</table><%@ include file="copyright.jsp"%></td>
+</table>
+
+<%@ include file="copyright.jsp"%></td>
   </tr>
 </table>
   </body>

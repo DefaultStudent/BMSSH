@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="GB18030" contentType="text/html; charset=gb18030"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 
 <%
 String path = request.getContextPath();
@@ -37,30 +38,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <td align="center" valign="top"><table width="100%" height="493"  border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td align="center" valign="top">
-	<form name="form1" method="post" action="">
-	<table width="600" height="432"  border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
-      <tr>
-        <td align="center">用户编号：</td>
-        <td height="39"><input name="rid" type="text" id="rid" size="40">
-         </td>
-      </tr>
-   <tr>
-        <td align="center">姓名：</td>
-        <td><input name="rname" type="text"  id="rname" size="40"></td>
-      </tr>
-      <tr>
-        <td align="center">身份证：</td>
-        <td><input name="ridcard" type="text"  id="ridcard" size="40"></td>
-      </tr>
- 
-      <tr>
-        <td align="center">&nbsp;</td>
-        <td><input name="Submit" type="submit" class="btn_grey" value="保存" onClick="return check(form1)">
-&nbsp;
-<input name="Submit2" type="button" class="btn_grey" value="返回" onClick="history.back()"></td>
-      </tr>
-    </table>
-	</form>
+	<s:form name="form1" method="post" action="Reader_add">
+	    <s:textfield label="用户编号" name="reader.rid"></s:textfield>
+	    <s:textfield label="姓名" name="reader.rname"></s:textfield>
+	    <s:textfield label="身份证" name="reader.ridcard"></s:textfield>
+	    <s:submit value="保存" onclick="return check(form1)"></s:submit>
+	    <s:reset value="重置"></s:reset>
+	</s:form>
 	</td>
   </tr>
 </table></td>
