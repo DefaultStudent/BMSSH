@@ -31,8 +31,8 @@ public class ReaderDAOImpl implements ReaderDAO {
 	@Override
 	public List<Reader> findAllReader() throws Exception {
 		String hql = "from Reader";
-		Query query1 = session.createQuery(hql);
-		List<Reader> list = query1.list();
+		Query query = session.createQuery(hql);
+		List<Reader> list = query.list();
 		tran.commit();
 		return list;
 	}
