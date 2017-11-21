@@ -85,4 +85,13 @@ public class BookInfoDAOImpl implements BookInfoDAO {
 		return true;
 	}
 
+	// 查询单个图书信息
+	@Override
+	public BookInfo findBookInfoById(int bookid) throws Exception {
+		// TODO Auto-generated method stub
+		BookInfo bookinfo = (BookInfo)session.get(BookInfo.class, bookid);
+		tran.commit();
+		return bookinfo;
+	}
+
 }

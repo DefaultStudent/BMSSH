@@ -24,5 +24,8 @@ public interface BookTypeDAO {
 	
 	// 删除图书类型信息
 	public boolean deleteBookType(int booktypeid) throws Exception;
+	
+	// 查询单个图书类型信息
+	public BookType findBookTypeById(int booktypeid) throws Exception;
 
 }

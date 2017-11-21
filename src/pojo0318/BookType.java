@@ -1,8 +1,5 @@
 package pojo0318;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * 
  * @author Simon

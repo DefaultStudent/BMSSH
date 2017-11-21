@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="pojo.BookType" table="booktype">
+    <class name="pojo0318.BookType" table="booktype">
         <id name="booktypeid" column="booktypeid">
-            <generator class="assigned" />
+            <generator class="assigned" /><!-- 主键的生成策略 -->
         </id>
         <property name="booktypename" column="booktypename"></property>
     </class>

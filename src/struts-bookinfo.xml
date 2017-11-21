@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+
+<struts>
+    <package name="bookinfo" extends="struts-default" namespace="/">
+        <action name="BookInfo_add" class="action0318.BookInfoAction" method="addBookInfo">
+            <result name="success" type="chain">BookInfo_findAll</result>
+            <result name="input">/readerinfo_add.jsp</result>
+        </action>
+       
+        <action name="BookInfo_delete" class="action0318.BookInfoAction" method="deleteBookInfo">
+            <result name="success" type="chain">BookInfo_findAll</result>
+        </action>
+        
+        <action name="BookInfo_findAll" class="action0318.BookInfoAction" method="findAll">
+            <result name="success">/bookinfo_queryall.jsp</result>
+        </action>
+        
+        <action name="BookInfo_update" class="action0318.BookInfoAction" method="updateBookInfo">
+            <result name="success" type="chain">BookInfo_findAll</result>
+            <result name="input">/bookinfo_update.jsp</result>
+        </action>
+        
+        <action name="BookInfo_findOne" class="action0318.BookInfoAction" method="findOneBookInfo">
+            <result name="success" type="chain">Bu</result>
+        </action>
+        
+        <action name="ba" class="action0318.BookTypeAction" method="findAll">
+            <result name="success">/bookinfo_add.jsp</result>
+        </action>
+        
+        <action name="Bu" class="action0318.BookTypeAction" method="findAll">
+            <result name="success">/bookinfo_update.jsp</result>
+        </action>
+    </package>
+</struts>

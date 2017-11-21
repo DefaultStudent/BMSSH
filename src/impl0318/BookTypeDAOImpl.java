@@ -68,4 +68,12 @@ public class BookTypeDAOImpl implements BookTypeDAO{
 		return true;
 	}
 
+	// 查询单个图书类型信息
+	@Override
+	public BookType findBookTypeById(int booktypeid) throws Exception {
+		BookType booktype = (BookType)session.get(BookType.class, booktypeid);
+		tran.commit();
+		return booktype;
+	}
+
 }

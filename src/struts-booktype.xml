@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+
+<struts>
+    <package name="booktype" extends="struts-default" namespace="/">
+        <action name="BookType_add" class="action0318.BookTypeAction" method="addBookType">
+            <result name="success" type="chain">BookType_findAll</result>
+            <result name="input">/booktype_add.jsp</result>
+        </action>
+        
+        <action name="BookType_delete" class="action0318.BookTypeAction" method="deleteBookType">
+            <result name="success" type="chain">BookType_findAll</result>
+        </action>
+        
+        <action name="BookType_findAll" class="action0318.BookTypeAction" method="findAll">
+            <result name="success">/booktype_queryall.jsp</result>
+        </action>
+        
+        <action name="BookType_update" class="action0318.BookTypeAction" method="updateBookType">
+            <result name="success" type="chain">BookType_findAll</result>
+        </action>
+        
+        <action name="BookType_findOne" class="action0318.BookTypeAction" method="findBookTypeById">
+            <result name="success">/booktype_update.jsp</result>
+        </action>
+    </package>
+</struts>

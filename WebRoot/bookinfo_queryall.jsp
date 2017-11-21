@@ -1,4 +1,5 @@
 <%@ page language="java"   import="java.util.*"  pageEncoding="utf-8" contentType="text/html; charset=UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <% 
 	    request.setCharacterEncoding("utf-8"); 
 %>
@@ -33,7 +34,7 @@
         <td height="273" align="center" valign="top">
           <table width="100%"  border="0" cellspacing="0" cellpadding="0">
             <tr>
-           <td><a href="bookinfo_add.jsp" >添加图书信息</a> </td>
+           <td><a href="ba" >添加图书信息</a> </td>
          
           </tr>
           </table>
@@ -50,22 +51,38 @@
     <td width="5%" bgcolor="#F9D16B">修改</td>
     <td width="5%" bgcolor="#F9D16B">删除</td>
   </tr>
-  
+  <s:iterator var="bookinfo" value="#session.bookinfo">
   <tr>
-  <td style="padding:5px;"></td>
-   <td style="padding:5px;"></td>
-    <td style="padding:5px;"></td>
-    <td style="padding:5px;"></td>
-    <td style="padding:5px;"></td>
-    <td style="padding:5px;"></td>
-    <td style="padding:5px;"></td>
+  <td style="padding:5px;">
+  <s:property value="#bookinfo.bookid"/>
+  </td>
+   <td style="padding:5px;">
+   <s:property value="#bookinfo.bookname"/>
+   </td>
+    <td style="padding:5px;">
+    <s:property value="#bookinfo.booktypename"/>
+    </td>
+    <td style="padding:5px;">
+    <s:property value="#bookinfo.author"/>
+    </td>
+    <td style="padding:5px;">
+    <s:property value="#bookinfo.pubname"/>
+    </td>
+    <td style="padding:5px;">
+    <s:property value="#bookinfo.isbn"/>
+    </td>
+    <td style="padding:5px;">
+     <s:property value="#bookinfo.price"/>
+    </td>
 
 
    
-     <td align="center"><a href="*******">修改</a></td>
+     <td align="center"><s:a href="BookInfo_findOne?bookid=%{#bookinfo.bookid}">修改</s:a></td>
     <td align="center"><a href="*******" >删除</a></td> 
  
   </tr>
+  </s:iterator>
+  
 <%
  
 %>  

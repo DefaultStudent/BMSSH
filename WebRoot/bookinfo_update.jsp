@@ -26,10 +26,6 @@
    <%@include file="banner.jsp"%>
    <%@include file="navigation.jsp"%>
   
-  <%
-      
-      
-  %>
   <table width="778"  border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td valign="top" bgcolor="#FFFFFF"><table width="99%" height="510"  border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="tableBorder_gray">
@@ -42,43 +38,37 @@
          <td align="center" valign="top"><table width="100%" height="493"  border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td align="center" valign="top">
-	<form name="form1" method="post" action="">
+	<s:form name="form1" method="post" action="BookInfo_update">
 	<table width="600" height="432"  border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
       <tr>
-        <td align="center">图书名称：
-           <input name="bookid" type="hidden" size="50" value="******">
-        </td>
-        <td height="39">
-          <input name="bookname" type="text"  id="bookname"  size="60" value="*******" readonly>* 
+        <td align="center">
+           <s:hidden name="bookinfo.bookid" value="%{#session.bookid}"></s:hidden>
+          <s:textfield label="图书名称" name="bookinfo.bookname" value="%{#session.bookname}"></s:textfield>* 
         </td>
       </tr>
       <tr>
-        <td align="center">图书类型：</td>
-        <td><select name="booktypename"  >
-	 
-	              **********
-	
-             </select>
-        </td>
-      </tr>
-      <tr>
-        <td align="center">作者：</td>
-        <td><input name="author" type="text"  id="author" size="40"  value="*****"></td>
-      </tr>
-      <tr>
-        <td align="center">出版社：</td>
         <td>
-        <input name="pubname" type="text"  id="pubname" size="40"  value="*****">
+        <s:select label="图书类型" list="#session.bt" name="bookinfo.booktypename" value="%{#session.booktypename}"></s:select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <s:textfield label="作者" name="bookinfo.author" value="%{#session.author}"></s:textfield>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <s:textfield label="出版社" name="bookinfo.pubname" value="%{#session.pubname}"></s:textfield>
           </td>
       </tr>
        <tr>
-        <td align="center">ISBN：</td>
-        <td><input name="isbn" type="text" id="isbn" value="*****">  </td>
+        <td>
+        <s:textfield label="ISBN" name="bookinfo.isbn" value="%{#session.isbn}"></s:textfield>
+        </td>
       </tr>
       
       <tr>
-        <td align="center">价格：</td>
-        <td><input name="price" type="text" id="price" value="*****">(元) * </td>
+        <td><s:textfield label="价格" name="bookinfo.price" value="%{#session.price}"></s:textfield></td>
       </tr>
  
       <tr>
@@ -88,7 +78,7 @@
        <input name="Submit2" type="button" class="btn_grey" value="返回" onClick="history.back()"></td>
       </tr>
     </table>
-	</form>
+	</s:form>
 	</td>
   </tr>
 </table></td>

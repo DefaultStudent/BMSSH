@@ -22,6 +22,8 @@
 	<property name="show_sql">true</property>
 	<mapping resource="pojo0318/Users.hbm.xml" />
 	<mapping resource="pojo0318/Reader.hbm.xml" />
+	<mapping resource="pojo0318/BookType.hbm.xml" />
+	<mapping resource="pojo0318/BookInfo.hbm.xml" />
 
 </session-factory>
 

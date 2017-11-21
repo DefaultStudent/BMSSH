@@ -24,5 +24,8 @@ public interface BookInfoDAO {
 	
 	// 删除图书信息
 	public boolean deleteBookInfo(int bookid) throws Exception;
+	
+	// 查询单个图书信息
+	public BookInfo findBookInfoById(int bookid) throws Exception;
 
 }

@@ -6,7 +6,9 @@
 
 
 <struts>
-    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <constant name="struts.i18n.encoding" value="gb2312"></constant>
     <include file="struts-login.xml"></include>
     <include file="struts-reader.xml"></include>
+    <include file="struts-booktype.xml"></include>
+    <include file="struts-bookinfo.xml"></include>
 </struts>

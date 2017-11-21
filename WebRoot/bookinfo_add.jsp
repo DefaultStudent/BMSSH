@@ -1,4 +1,5 @@
 <%@ page language="java"   import="java.util.*"  pageEncoding="GB18030" contentType="text/html; charset=gb18030"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <% 
 	    request.setCharacterEncoding("gb18030"); 
 %>
@@ -39,54 +40,52 @@
          <td align="center" valign="top"><table width="100%" height="493"  border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td align="center" valign="top">
-	<form name="form1" method="post" action="BookInfoAddServlet">
+	<s:form name="form1" method="post" action="BookInfo_add" theme="simple">
 	<table width="600" height="432"  border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
 	   <tr>
         <td align="center">图书编号：</td>
-        <td height="39"><input name="bookid" type="text" id="bookid" size="50">
-          * </td>
+        <td height="39"><input name="bookinfo.bookid" type="text" id="bookid" size="50">
+        </td>
       </tr>
     <tr>
         <td align="center">图书名称：</td>
-        <td height="39"><input name="bookname" type="text" id="bookname" size="50">
+        <td height="39"><input name="bookinfo.bookname" type="text" id="bookname" size="50">
           * </td>
       </tr>
       <tr>
         <td align="center">图书类型：</td>
         <td>
-			<select name="booktypename" class="wenbenkuang" id="booktypename">
-                <option value="*****">*****</option>
-             </select>
+			<s:select list="#session.bt" name="bookinfo.booktypename"></s:select>
         </td>
       </tr>
       <tr>
         <td align="center">作者：</td>
-        <td><input name="author" type="text"  id="author" size="40"></td>
+        <td><input name="bookinfo.author" type="text"  id="author" size="40"></td>
       </tr>
     
       <tr>
         <td align="center">出版社：</td>
         <td>
-           <input name="pubname" type="text" id="pubname" size="50">
+           <input name="bookinfo.pubname" type="text" id="pubname" size="50">
           </td>
       </tr>
        <tr>
         <td align="center">ISBN：</td>
-        <td><input name="isbn" type="text" id="isbn"> * </td>
+        <td><input name="bookinfo.isbn" type="text" id="isbn"> * </td>
       </tr>
       <tr>
         <td align="center">价格：</td>
-        <td><input name="price" type="text" id="price">(元) * </td>
+        <td><input name="bookinfo.price" type="text" id="price">(元) * </td>
       </tr>
     
       <tr>
         <td align="center">&nbsp;</td>
-        <td><input name="Submit" type="submit" class="btn_grey" value="保存" onClick="return check(form1)">
+        <td><input name="Submit" type="submit" class="btn_grey" value="保存" onClick="return check(form1)"/>
 &nbsp;
-<input name="Submit2" type="button" class="btn_grey" value="返回" onClick="history.back()"></td>
+<input name="Submit2" type="button" class="btn_grey" value="返回" onClick="history.back()"/></td>
       </tr>
     </table>
-	</form>
+	</s:form>
 	</td>
   </tr>
 </table></td>
