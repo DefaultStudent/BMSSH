@@ -41,6 +41,7 @@
     <td width="10%" bgcolor="#F9D16B">用户编号</td>
     <td width="10%" bgcolor="#F9D16B">用户姓名</td>
     <td width="12%" bgcolor="#F9D16B">身份证</td>
+    <td width="8%" bgcolor="#F9D16B">修改</td>
     <td width="8%" bgcolor="#F9D16B">删除</td>
   </tr>
   <s:iterator var="reader" value="#session.reader"> 
@@ -54,6 +55,7 @@
   <td style="padding:5px;">
      <s:property value="#reader.ridcard"/>
      </td>
+     <td align="center"><s:a href="Reader_findOne?rid=%{#reader.rid}">修改</s:a></td>
   <td align="center"><s:a href="Reader_delete?rid=%{#reader.rid}">删除</s:a></td> 
  
   </tr>

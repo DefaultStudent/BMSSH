@@ -19,5 +19,13 @@
         <action name="Reader_findAll" class="action0318.ReaderAction" method="findAll">
             <result name="success">/readerinfo_queryall.jsp</result>
         </action>
+        
+        <action name="Reader_findOne" class="action0318.ReaderAction" method="findOneReader">
+            <result name="success">/readerinfo_update.jsp</result>
+        </action>
+        
+        <action name="Reader_update" class="action0318.ReaderAction" method="updateReader">
+            <result name="success" type="chain">Reader_findAll</result>
+        </action>
     </package>
 </struts>

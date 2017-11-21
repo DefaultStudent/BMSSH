@@ -174,8 +174,8 @@ tdbg.style.background='url(.Images/item_out.gif)'
 tdbg.style.border=''
 }
 
-var readermenu='<table width=90><tr><td id=readerType onMouseOver=overbg(readerType) onMouseOut=outbg(readerType)><a href=>读者添加</a></td></tr>\
-<tr><td id=reader onMouseOver=overbg(reader) onMouseOut=outbg(reader)><a href="Reader_findAll">读者档案管理</a></td></tr>\
+var readermenu='<table width=90><tr><td id=readerType onMouseOver=overbg(readerType) onMouseOut=outbg(readerType)><a href=>用户类别管理</a></td></tr>\
+<tr><td id=reader onMouseOver=overbg(reader) onMouseOut=outbg(reader)><a href="Reader_findAll">用户档案管理</a></td></tr>\
 </table>'
 var bookmenu='<table width=90><tr><td id=bookType onMouseOver=overbg(bookType) onMouseOut=outbg(bookType)><a href=>撒的</a></td></tr>\
 <tr><td id=bookcase onMouseOver=overbg(bookcase) onMouseOut=outbg(bookcase)><a href="BookInfo_findAll">图书信息管理</a></td></tr>\

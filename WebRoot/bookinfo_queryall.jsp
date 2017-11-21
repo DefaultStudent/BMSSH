@@ -78,7 +78,7 @@
 
    
      <td align="center"><s:a href="BookInfo_findOne?bookid=%{#bookinfo.bookid}">修改</s:a></td>
-    <td align="center"><a href="*******" >删除</a></td> 
+    <td align="center"><s:a href="BookInfo_delete?bookid=%{#bookinfo.bookid}" >删除</s:a></td> 
  
   </tr>
   </s:iterator>

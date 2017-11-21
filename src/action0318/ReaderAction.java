@@ -67,5 +67,17 @@ public class ReaderAction extends ActionSupport {
 		DAOFactory.getReaderInstances().deleteReader(rid);
 		return SUCCESS;
 	}
+	
+	// 查询单个用户信息
+	public String findOneReader() throws Exception{
+		HttpServletRequest request = ServletActionContext.getRequest();
+		HttpSession hsession = request.getSession();
+		int rid = Integer.parseInt(request.getParameter("rid"));
+		Reader reader = DAOFactory.getReaderInstances().findReaderById(rid);
+		hsession.setAttribute("rid", reader.getRid());
+		hsession.setAttribute("rname", reader.getRname());
+		hsession.setAttribute("ridcard", reader.getRidcard());
+		return SUCCESS;
+	}
 
 }
