@@ -7,9 +7,15 @@
 
 <struts>
     <package name="booktype" extends="struts-default" namespace="/">
+    	<!-- 自定义拦截器 -->
+	    <interceptors>
+	    	<interceptor name="replace" class="Interceptor0318.MessageInterceptor"></interceptor>
+	    </interceptors>
+    
         <action name="BookType_add" class="action0318.BookTypeAction" method="addBookType">
+        	<interceptor-ref name="defaultStack"/>
+        	<interceptor-ref name="replace"></interceptor-ref>
             <result name="success" type="chain">BookType_findAll</result>
-            <result name="input">/booktype_add.jsp</result>
         </action>
         
         <action name="BookType_delete" class="action0318.BookTypeAction" method="deleteBookType">
@@ -17,6 +23,7 @@
         </action>
         
         <action name="BookType_findAll" class="action0318.BookTypeAction" method="findAll">
+        	
             <result name="success">/booktype_queryall.jsp</result>
         </action>
         

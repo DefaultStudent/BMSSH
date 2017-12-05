@@ -7,8 +7,10 @@
 
 <struts>
     <constant name="struts.i18n.encoding" value="gb2312"></constant>
+    <constant name="struts.custom.i18n.resources" value="login"></constant>
     <include file="struts-login.xml"></include>
     <include file="struts-reader.xml"></include>
     <include file="struts-booktype.xml"></include>
     <include file="struts-bookinfo.xml"></include>
+
 </struts>

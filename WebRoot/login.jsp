@@ -46,7 +46,7 @@
                         </tr> 
                         <tr>
                            <td width="50%" height="37">&nbsp;</td>
-                           <td width="10%">帐号：</td>
+                           <td width="10%"><s:text name="page.users.uid"/></td>
                            <td width="31%">
                             <s:textfield name="users.uid" class="logininput" id="userid" size="27"/>
                            </td>
@@ -54,7 +54,7 @@
                         </tr>
                         <tr>
                             <td height="37">&nbsp;</td>
-                            <td>密码：</td>
+                            <td><s:text name="page.users.upwd"/></td>
                             <td><s:password name="users.upwd" class="logininput" id="upwd" size="27"/>
                          </td>
                             <td>&nbsp;</td>
@@ -62,10 +62,10 @@
                         <tr>
                             <td height="30">&nbsp;</td>
                             <td colspan="2" align="center">
-                            <s:submit name="Submit" class="btn_grey" value="确定"/>
+                            <s:submit name="Submit" class="btn_grey" key="page.login.submit"/>
                       
                              &nbsp;
-                          <s:reset name="Submit3" class="btn_grey" value="重置"/>
+                          <s:reset name="Submit3" class="btn_grey" key="page.login.reset"/>
                            &nbsp;
                             </td>
                             <td>&nbsp;</td>
